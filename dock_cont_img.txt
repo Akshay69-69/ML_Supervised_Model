@@ -1,0 +1,12 @@
+create index.html file 
+
+create docker file 
+
+FROM nginx
+COPY index.html /usr/share/nginx/html/index.html
+
+
+cmds:
+docker build -t myweb:v1 .
+
+docker run -d -p 9090:80 myweb:v1
